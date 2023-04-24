@@ -31,6 +31,7 @@ public class Factura {
     private String codigoUnico;
     private LocalDate fechaEmision;
     private String descripcion;
+     @XmlJavaTypeAdapter(value = LocalDateAdapter.class)
     private double importe;
 
     //--El XML
