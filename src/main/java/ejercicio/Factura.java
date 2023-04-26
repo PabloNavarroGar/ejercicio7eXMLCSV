@@ -6,6 +6,7 @@ package ejercicio;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -27,6 +28,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 public class Factura {
 
     //Atributos
+    private List<Factura> facturas;
     private int contadorInstancias = 0;
     private String codigoUnico;
     private LocalDate fechaEmision;
@@ -81,10 +83,19 @@ public class Factura {
     public void setImporte(double importe) {
         this.importe = importe;
     }
-
+    
     @Override
     public String toString() {
         return "["  + codigoUnico + ";" + fechaEmision + ";" + descripcion + ";" + importe + ']';
     }
 
+    public List<Factura> getFacturas() {
+        return facturas;
+    }
+
+    public void setFacturas(List<Factura> facturas) {
+        this.facturas = facturas;
+    }
+
+    
 }

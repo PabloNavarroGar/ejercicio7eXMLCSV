@@ -19,6 +19,8 @@ public class LeerXMLCatalogoFacturas {
 
     /**
      * @param args the command line arguments
+     * @throws javax.xml.bind.JAXBException
+     * @throws java.io.FileNotFoundException
      */
     public static void main(String[] args)throws JAXBException, 
             FileNotFoundException  {
